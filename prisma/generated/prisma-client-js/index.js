@@ -153,7 +153,12 @@ const config = {
     "config": {
       "engineType": "library"
     },
-    "binaryTargets": [],
+    "binaryTargets": [
+      {
+        "fromEnvVar": null,
+        "value": "debian-openssl-1.1.x"
+      }
+    ],
     "previewFeatures": [],
     "isCustomOutput": true
   },
@@ -168,7 +173,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
-  "postinstall": true,
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
@@ -177,8 +182,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgICBwcm92aWRlciA9ICJwcmlzbWEtY2xpZW50LWpzIgogICAgb3V0cHV0ICAgPSAiLi9nZW5lcmF0ZWQvcHJpc21hLWNsaWVudC1qcyIKfQoKZGF0YXNvdXJjZSBkYiB7CiAgICBwcm92aWRlciA9ICJwb3N0Z3Jlc3FsIgogICAgdXJsICAgICAgPSBlbnYoIkRBVEFCQVNFX1VSTCIpCn0KCi8vIFBvc3RzIFRhYmxlCm1vZGVsIEFydGljbGVzIHsKICAgIGlkICAgICAgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgICBwb3N0X2lkICAgICBTdHJpbmcgICBAdW5pcXVlCiAgICB1cmwgICAgICAgICBTdHJpbmcKICAgIHRpdGxlICAgICAgIFN0cmluZwogICAgY29udGVudCAgICAgU3RyaW5nCiAgICBzbHVnICAgICAgICBTdHJpbmcKICAgIGRlc2NyaXB0aW9uIFN0cmluZwogICAgbm90aWZpZWQgICAgQm9vbGVhbiAgQGRlZmF1bHQoZmFsc2UpCiAgICBjcmVhdGVkQXQgICBEYXRlVGltZSBAZGVmYXVsdChub3coKSkKICAgIHVwZGF0ZWRBdCAgIERhdGVUaW1lIEB1cGRhdGVkQXQKfQoKLy8gRXZlbnRzIFRhYmxlCm1vZGVsIEV2ZW50cyB7CiAgICBpZCAgICAgICAgICBJbnQgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogICAgZXZlbnRfaWQgICAgU3RyaW5nCiAgICB0aXRsZSAgICAgICBTdHJpbmcKICAgIGRlc2NyaXB0aW9uIFN0cmluZwogICAgc3RhcnRfdGltZSAgU3RyaW5nCiAgICBlbmRfdGltZSAgICBTdHJpbmcKICAgIGxvY2F0aW9uICAgIFN0cmluZwogICAgY3JlYXRlZEF0ICAgRGF0ZVRpbWUgQGRlZmF1bHQobm93KCkpCiAgICB1cGRhdGVkQXQgICBEYXRlVGltZSBAdXBkYXRlZEF0Cn0KCi8vIFN1YnNjcmliZXJzIFRhYmxlCm1vZGVsIFN1YnNjcmliZXJzIHsKICAgIGlkICAgICAgICAgSW50ICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICAgIGZpcnN0X25hbWUgU3RyaW5nCiAgICBsYXN0X25hbWUgIFN0cmluZwogICAgZW1haWwgICAgICBTdHJpbmcgICBAdW5pcXVlCiAgICBjcmVhdGVkQXQgIERhdGVUaW1lIEBkZWZhdWx0KG5vdygpKQp9Cg==",
-  "inlineSchemaHash": "7c9564d835dde7ddbb7c8c9e6ff0c7fb88b4f762a199735a3d6e566b9e2410cb"
+  "inlineSchema": "Z2VuZXJhdG9yIGNsaWVudCB7CiAgICBwcm92aWRlciAgICAgID0gInByaXNtYS1jbGllbnQtanMiCiAgICBvdXRwdXQgICAgICAgID0gIi4vZ2VuZXJhdGVkL3ByaXNtYS1jbGllbnQtanMiCiAgICBiaW5hcnlUYXJnZXRzID0gWyJkZWJpYW4tb3BlbnNzbC0xLjEueCJdCn0KCmRhdGFzb3VyY2UgZGIgewogICAgcHJvdmlkZXIgPSAicG9zdGdyZXNxbCIKICAgIHVybCAgICAgID0gZW52KCJEQVRBQkFTRV9VUkwiKQp9CgovLyBQb3N0cyBUYWJsZQptb2RlbCBBcnRpY2xlcyB7CiAgICBpZCAgICAgICAgICBJbnQgICAgICBAaWQgQGRlZmF1bHQoYXV0b2luY3JlbWVudCgpKQogICAgcG9zdF9pZCAgICAgU3RyaW5nICAgQHVuaXF1ZQogICAgdXJsICAgICAgICAgU3RyaW5nCiAgICB0aXRsZSAgICAgICBTdHJpbmcKICAgIGNvbnRlbnQgICAgIFN0cmluZwogICAgc2x1ZyAgICAgICAgU3RyaW5nCiAgICBkZXNjcmlwdGlvbiBTdHJpbmcKICAgIG5vdGlmaWVkICAgIEJvb2xlYW4gIEBkZWZhdWx0KGZhbHNlKQogICAgY3JlYXRlZEF0ICAgRGF0ZVRpbWUgQGRlZmF1bHQobm93KCkpCiAgICB1cGRhdGVkQXQgICBEYXRlVGltZSBAdXBkYXRlZEF0Cn0KCi8vIEV2ZW50cyBUYWJsZQptb2RlbCBFdmVudHMgewogICAgaWQgICAgICAgICAgSW50ICAgICAgQGlkIEBkZWZhdWx0KGF1dG9pbmNyZW1lbnQoKSkKICAgIGV2ZW50X2lkICAgIFN0cmluZwogICAgdGl0bGUgICAgICAgU3RyaW5nCiAgICBkZXNjcmlwdGlvbiBTdHJpbmcKICAgIHN0YXJ0X3RpbWUgIFN0cmluZwogICAgZW5kX3RpbWUgICAgU3RyaW5nCiAgICBsb2NhdGlvbiAgICBTdHJpbmcKICAgIGNyZWF0ZWRBdCAgIERhdGVUaW1lIEBkZWZhdWx0KG5vdygpKQogICAgdXBkYXRlZEF0ICAgRGF0ZVRpbWUgQHVwZGF0ZWRBdAp9CgovLyBTdWJzY3JpYmVycyBUYWJsZQptb2RlbCBTdWJzY3JpYmVycyB7CiAgICBpZCAgICAgICAgIEludCAgICAgIEBpZCBAZGVmYXVsdChhdXRvaW5jcmVtZW50KCkpCiAgICBmaXJzdF9uYW1lIFN0cmluZwogICAgbGFzdF9uYW1lICBTdHJpbmcKICAgIGVtYWlsICAgICAgU3RyaW5nICAgQHVuaXF1ZQogICAgY3JlYXRlZEF0ICBEYXRlVGltZSBAZGVmYXVsdChub3coKSkKfQo=",
+  "inlineSchemaHash": "857fac5bc310820b9c7d5af823850499f56f638f9400f0dbf1f440a1e366bdb4"
 }
 
 const fs = require('fs')
@@ -215,8 +220,8 @@ exports.PrismaClient = PrismaClient
 Object.assign(exports, Prisma)
 
 // file annotations for bundling tools to include these files
-path.join(__dirname, "libquery_engine-debian-openssl-3.0.x.so.node");
-path.join(process.cwd(), "prisma/generated/prisma-client-js/libquery_engine-debian-openssl-3.0.x.so.node")
+path.join(__dirname, "libquery_engine-debian-openssl-1.1.x.so.node");
+path.join(process.cwd(), "prisma/generated/prisma-client-js/libquery_engine-debian-openssl-1.1.x.so.node")
 // file annotations for bundling tools to include these files
 path.join(__dirname, "schema.prisma");
 path.join(process.cwd(), "prisma/generated/prisma-client-js/schema.prisma")
