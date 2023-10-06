@@ -1,0 +1,19 @@
+# OPENAI APIs Credentials
+OPENAI_API_KEY= YOUR OPEN AI API KEY
+OPENAI_ORGANIZATION_ID=YOUR OPEN AI ORGANIZATION ID
+
+# LocalHost Connection Port
+PORT=9000
+
+# Frontend ORIGIN URL
+ORIGIN_URL=http://localhost:3000
+
+
+# Nylas APIs Credentials
+NYLAS_ACCESS_TOKEN=YOUR NYLAS ACCESS TOKEN
+NYLAS_CLIENT_ID=YOUR NYLAS CLIENT ID
+NYLAS_CLIENT_SECRET=YOUR NYLAS CLIENT SECRET
+
+# Database Connection
+DATABASE_URL=postgresql://<your db username>:<your db password>@localhost:5432/autoblog?schema=public
+
