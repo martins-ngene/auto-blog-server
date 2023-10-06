@@ -71,6 +71,14 @@ yarn start
 pnpm start
 ```
 
+### HOW TO USE APPLICATION
+
+To use this application is simple but detail oriented. So to understand how to use this application, watch the short video: [How To Use The Auto Blog AI App](https://www.nylas.com/)
+
+### HOW THE APPLICATION WORKS
+
+You might wonder what a particular code snippet does or how the application works, you can find a detailed walk through here: [How The Auto Blog AI App Works](https://www.nylas.com/)
+
 <!-- ### Updating The Database Schema -->
 
 <!-- Whenever the Prisma schema is updated, the database schema ia also updated using either `prisma migrate dev` or `prisma db push`. This will keep the database schema in sync with the Prisma schema. The commands will also regenerate Prisma Client. -->

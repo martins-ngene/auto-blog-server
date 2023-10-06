@@ -27,7 +27,7 @@ let corsOptions = {
 };
 
 // To enable cross origin resource sharing
-app.use(cors(corsOptions));
+app.use(cors());
 
 // If content-type for POST req is application/json, read the JSON body of the request, parse it and put it in req.body
 app.use(express.json());
